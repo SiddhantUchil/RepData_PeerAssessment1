@@ -104,6 +104,5 @@ l + geom_line() + facet_wrap(. ~ h$`f$daytype`)
 
 
 
-
 ?axis
 max(b$`a$steps`)
