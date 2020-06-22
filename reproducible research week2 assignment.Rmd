@@ -37,6 +37,10 @@ axis(1, at=c(0, max(b$`a$steps`)), labels=c("",""), lwd.ticks=0)
 axis(1, at=seq(0 , max(b$`a$steps`), by=5000), lwd=0, lwd.ticks=1)
 dev.off()
 ```
+```{r}
+library(knitr)
+include_graphics("question2.png")
+```
 
 
 
@@ -66,7 +70,10 @@ png( filename = "question4.png", width = 960, height = 960)
 plot(d$`a$interval`, d$`a$steps`, type = "l", xlab = "interval", ylab = "steps", main = "time series of average steps")
 dev.off()
 ```
-
+```{r}
+library(knitr)
+include_graphics("question4.png")
+```
 
 
 ## Question 5 - The 5-minute interval that, on average, contains the maximum number of steps
@@ -122,6 +129,11 @@ hist(g$`f$steps`, breaks = seq(0 , 25000, by = 5000), xlab = "steps taken per da
 axis(1, at=c(0, max(g$`f$steps`)), labels=c("",""), lwd.ticks=0)
 axis(1, at=seq(0 , max(g$`f$steps`), by=5000), lwd=0, lwd.ticks=1)
 dev.off()
+```
+```{r}
+library(knitr)
+include_graphics("question7.png")
+
 # as we can see, the impact of imputing missing data is that the max frequency has increased to 35
 ```
 
@@ -151,5 +163,9 @@ png( filename = "question8.png", width = 960, height = 960)
 i = ggplot(data = h, mapping = aes(h$`f$interval`, h$`f$steps`))
 i + geom_line() + facet_wrap(. ~ h$`f$daytype`) + labs(x = "Intervals", y = "daily average of steps", title = "pattern")
 dev.off()
+```
+```{r}
+library(knitr)
+include_graphics("question8.png")
 # We notice that during weekdays, the number of steps taken is higher in the beginning of the day while during weekends the number of steps are spread more evenly throughout the day
 ```
